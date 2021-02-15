@@ -1,0 +1,27 @@
+<button title="New" type="button" class="btn btn-dark btn-sm mr-1 mb-3 right">
+    <fa-icon [icon]="faPlus"></fa-icon>
+    New
+</button>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let beneficiary of beneficiaries">
+            <td>{{ beneficiary.id }}</td>
+            <td>{{ beneficiary.name }}</td>
+            <td>
+                <button title="Edit" type="button" class="btn btn-dark btn-sm mr-1">
+                    <fa-icon [icon]="faEdit"></fa-icon>
+                </button>
+                <button title="Remove" type="button" class="btn btn-dark btn-sm">
+                    <fa-icon [icon]="faTrash"></fa-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
