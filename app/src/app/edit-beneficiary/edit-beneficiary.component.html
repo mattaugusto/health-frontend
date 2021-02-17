@@ -1,0 +1,60 @@
+<div class="card mt-2">
+    <div class="card-body">
+      <h5 class="card-title">Update beneficiary</h5>
+      <form [formGroup]="beneficiaryForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01">First name</label>
+            <input type="text" class="form-control" id="validationServer01" placeholder="First name" value="" required formControlName="firstName">
+            <div class="invalid-feedback">
+                Please provide a first name.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationServer02">Last name</label>
+            <input type="text" class="form-control" id="validationServer02" placeholder="Last name" value="" required formControlName="lastName">
+            <div class="invalid-feedback">
+                Please provide a last name.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationServerUsername">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" value="" required formControlName="username">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationServer03">City</label>
+            <input type="text" class="form-control" id="validationServer03" placeholder="City" value="" required formControlName="city">
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationServer04">State</label>
+            <input type="text" class="form-control" id="validationServer04" placeholder="State" value="" required formControlName="state">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationServer05">Zip</label>
+            <input type="text" class="form-control" id="validationServer05" placeholder="Zip" value="" required formControlName="zip">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-dark right ml-1" type="submit">Submit form</button>
+        <button class="btn btn-secondary right" routerLink="/beneficiaries">Voltar</button>
+      </form>
+    </div>
+</div>
