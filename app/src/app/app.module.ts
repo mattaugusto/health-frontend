@@ -7,19 +7,25 @@ import { HomeComponent } from './home/home.component';
 import { DataTablesModule } from "angular-datatables";
 import { HttpClientModule } from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NewBeneficiaryComponent } from './new-beneficiary/new-beneficiary.component';
+import { EditBeneficiaryComponent } from './edit-beneficiary/edit-beneficiary.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeneficiariesComponent,
-    HomeComponent
+    HomeComponent,
+    NewBeneficiaryComponent,
+    EditBeneficiaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

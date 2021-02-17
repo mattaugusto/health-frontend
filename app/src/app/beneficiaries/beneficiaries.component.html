@@ -1,4 +1,4 @@
-<button title="New" type="button" class="btn btn-dark btn-sm mr-1 mb-3 right">
+<button title="New" type="button" class="btn btn-dark btn-sm mt-2 mr-1 mb-3 right" routerLink="new">
     <fa-icon [icon]="faPlus"></fa-icon>
     New
 </button>
@@ -6,19 +6,29 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let beneficiary of beneficiaries">
             <td>{{ beneficiary.id }}</td>
-            <td>{{ beneficiary.name }}</td>
+            <td>{{ beneficiary.firstName }}</td>
+            <td>{{ beneficiary.lastName }}</td>
+            <td>{{ beneficiary.username }}</td>
+            <td>{{ beneficiary.city }}</td>
+            <td>{{ beneficiary.state }}</td>
+            <td>{{ beneficiary.zip }}</td>
             <td>
-                <button title="Edit" type="button" class="btn btn-dark btn-sm mr-1">
+                <button title="Edit" type="button" class="btn btn-dark btn-sm mr-1" [routerLink]="['edit', beneficiary.id]"> 
                     <fa-icon [icon]="faEdit"></fa-icon>
                 </button>
-                <button title="Remove" type="button" class="btn btn-dark btn-sm">
+                <button title="Remove" type="button" class="btn btn-dark btn-sm" (click)="onDelete(beneficiary.id)">
                     <fa-icon [icon]="faTrash"></fa-icon>
                 </button>
             </td>
